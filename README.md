@@ -39,7 +39,7 @@ slacker.send(channel_name, info)
 
 ...
 ```
-![sample1.png](img/sample1.png)
+![sample1](img/sample1.png)
 
 ### error occured
 ```python
@@ -51,7 +51,7 @@ except BaseException as e:
     info = slacker.get_info(epochs, metrics_dict, error=e)
     slacker.send(channel_name, info)
 ```
-![sample2.png](img/sample2.png)
+![sample2](img/sample2.png)
 
 ### training end
 ```python
@@ -61,4 +61,4 @@ metrics_dict = {'Acc':0.78, 'mAP': 0.72, 'loss':0.421, ... }
 info = slacker.get_info(epochs, metrics_dict, endTrain=True)
 slacker.send(channel_name, info)
 ```
-![sample3.png](img/sample3.png)
+![sample3](img/sample3.png)
