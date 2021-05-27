@@ -1,8 +1,16 @@
 # slackbot
 slackbot for DNN training alarm  
-modify values of `'author_icon'` and `'footer_icon'` in `slackbot.py`
 
-## init slackbot
+## Install 
+1. install Slack's SDK
+```terminal
+$ pip install slack_sdk
+```
+2. modify values of `'author_icon'` and `'footer_icon'` in `slackbot.py`
+
+
+## Use
+### init slackbot
 ```python
 ...
 
@@ -21,7 +29,7 @@ slackbot = slackAlarm(token, hyper_dict, url=url, memo=memo)
 ...
 ```
 
-##  on training
+###  on training
 ```python
 ...
 
@@ -31,7 +39,7 @@ slacker.send(channel_name, info)
 
 ...
 ```
-## error occured
+### error occured
 ```python
 try:
     ...
@@ -40,7 +48,7 @@ except BaseException as e:
     slacker.send(channel_name, info)
 ```
 
-## training end
+### training end
 ```python
 ...
 
