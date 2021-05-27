@@ -32,26 +32,33 @@ slackbot = slackAlarm(token, hyper_dict, url=url, memo=memo)
 ###  on training
 ```python
 ...
-
+# epochs = 10
 metrics_dict = {'Acc':0.15, 'mAP': 0.12, 'loss':1.221, ... }
-info = slacker.get_info(metrics_dict)
+info = slacker.get_info(epochs, metrics_dict)
 slacker.send(channel_name, info)
 
 ...
 ```
+![sample1.png](img/sample1.png)
+
 ### error occured
 ```python
+# epochs = 50
 try:
     ...
 except BaseException as e:
-    info = slacker.get_info(metrics_dict, error=e)
+    metrics_dict = {'Acc':0.38, 'mAP': 0.32, 'loss':0.821, ... }
+    info = slacker.get_info(epochs, metrics_dict, error=e)
     slacker.send(channel_name, info)
 ```
+![sample2.png](img/sample2.png)
 
 ### training end
 ```python
 ...
-
-info = slacker.get_info(metrics_dict, endTrain=True)
+# epochs = 100
+metrics_dict = {'Acc':0.78, 'mAP': 0.72, 'loss':0.421, ... }
+info = slacker.get_info(epochs, metrics_dict, endTrain=True)
 slacker.send(channel_name, info)
 ```
+![sample3.png](img/sample3.png)
