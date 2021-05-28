@@ -6,8 +6,26 @@ slackbot for DNN training alarm
 ```terminal
 $ pip install slack_sdk
 ```
-2. modify values of `'author_icon'` and `'footer_icon'` in `slackbot.py`
+2. modify values of `'author_icon'`, `footer` and `'footer_icon'` in `slackbot.py`
 
+## Path
+author_name = `알림 - [PROJECT_NAME]`  
+title = `[PROJECT_NAME]/[SUB] - 학습 중`
+
+```
+work
+ ├── project_1
+ │   ├── sub_1 
+ │   │   ├── train.py
+ │   │   └── ...
+ │   └── ...
+ ├── project_2
+ │   ├── sub_1
+ │   └── ...
+ └── project_3
+     ├── sub_1
+     └── ...
+```
 
 ## Use
 ### init slackbot
